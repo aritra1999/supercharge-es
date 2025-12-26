@@ -12,3 +12,5 @@ coverage.*
 profile.cov
 
 go.work.sum
+data/recipes_foodcom_only.csv
+data/recipes_foodcom_only.json
