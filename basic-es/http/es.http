@@ -1,0 +1,3 @@
+### List Elasticsearch Indexes
+GET http://localhost:9200/_cat/indices?v
+Accept: application/json
