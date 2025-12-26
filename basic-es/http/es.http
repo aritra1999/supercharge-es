@@ -1,3 +1,37 @@
+@baseUrl = http://localhost:9200
+
 ### List Elasticsearch Indexes
-GET http://localhost:9200/_cat/indices?v
+GET {{baseUrl}}/_cat/indices?v
+Accept: application/json
+
+### Elasticsearch Stats
+GET {{baseUrl}}/_stats
+Accept: application/json
+
+### Cluster Health
+GET {{baseUrl}}/_cluster/health
+Accept: application/json
+
+### Node Information
+GET {{baseUrl}}/_nodes/stats
+Accept: application/json
+
+### Search All Documents
+GET {{baseUrl}}/_search
+Accept: application/json
+Content-Type: application/json
+
+{
+  "query": {
+    "match_all": {}
+  },
+  "size": 10
+}
+
+### Get Mappings
+GET {{baseUrl}}/_mapping
+Accept: application/json
+
+### Get Cluster Settings
+GET {{baseUrl}}/_cluster/settings
 Accept: application/json
